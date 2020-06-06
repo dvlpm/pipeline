@@ -1,3 +1,5 @@
 FROM ubuntu
 
-RUN apt-get update && apt-get install make docker docker-compose
+RUN export DEBIAN_FRONTEND=noninteractive \
+ && apt-get update \
+ && apt-get -y install make docker docker-compose
